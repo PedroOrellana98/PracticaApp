@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navegation"
+    app:startDestination="@id/aboutFragment">
+
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="ec.edu.ups.ejemplobinding.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <argument
+            android:name="age"
+            app:argType="integer"
+            android:defaultValue="4" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="ec.edu.ups.ejemplobinding.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" >
+        <action
+            android:id="@+id/action_aboutFragment_to_homeFragment22"
+            app:destination="@id/homeFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/historial"
+        android:name="ec.edu.ups.ejemplobinding.Historial"
+        android:label="fragment_historial"
+        tools:layout="@layout/fragment_historial" />
+</navigation>
